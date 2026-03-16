@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Seu perfil começa a ganhar forma 🚀 | Asces-Unita</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #F0F2F7;
+      font-family: 'Inter', Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .email-wrapper {
+      width: 100%;
+      background-color: #F0F2F7;
+      padding: 32px 16px;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1A1560 0%, #2E2BA8 50%, #4F46E5 100%);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header-pattern {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        radial-gradient(circle at 80% 20%, rgba(255,200,60,0.18) 0%, transparent 50%),
+        radial-gradient(circle at 10% 80%, rgba(79,70,229,0.3) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .header-top {
+      padding: 24px 40px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .quiz-logo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      padding: 8px 18px 8px 10px;
+    }
+
+    .quiz-logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FFC83C, #FF6B35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .quiz-logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .quiz-logo-text .top {
+      font-family: 'Sora', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .quiz-logo-text .bottom {
+      font-family: 'Sora', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .header-hero {
+      padding: 36px 40px 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge-new {
+      display: inline-block;
+      background: linear-gradient(90deg, #FFC83C, #FF9F0A);
+      color: #1A1560;
+      font-family: 'Sora', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+
+    .header-hero h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .header-hero h1 span { color: #FFC83C; }
+
+    .header-hero p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.6;
+    }
+
+    .deco-circle-1 {
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      pointer-events: none;
+    }
+
+    .deco-circle-2 {
+      position: absolute;
+      bottom: -20px; right: 60px;
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      background: rgba(255,200,60,0.10);
+      border: 1px solid rgba(255,200,60,0.15);
+      pointer-events: none;
+    }
+
+    .wave-divider {
+      background: linear-gradient(135deg, #1A1560 0%, #2E2BA8 50%, #4F46E5 100%);
+      line-height: 0;
+    }
+    .wave-divider svg { display: block; width: 100%; }
+
+    .body-content { padding: 40px 40px 32px; }
+
+    .greeting {
+      font-family: 'Sora', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: #1A1560;
+      margin-bottom: 20px;
+    }
+
+    .body-content p {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #F4F3FF, #EEF2FF);
+      border-left: 4px solid #4F46E5;
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+
+    .highlight-box p {
+      font-size: 14px;
+      color: #3730A3;
+      font-weight: 500;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    .steps-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1A1560;
+      margin-bottom: 16px;
+    }
+
+    .steps-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .steps-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #FAFAFA;
+      border: 1px solid #EBEBEB;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .step-arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #4F46E5, #2E2BA8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .cta-block {
+      text-align: center;
+      margin: 36px 0 28px;
+    }
+
+    .cta-label {
+      font-size: 12px;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .cta-primary {
+      display: block;
+      max-width: 320px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #4F46E5, #2E2BA8);
+      color: #ffffff !important;
+      text-decoration: none;
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: 50px;
+      box-shadow: 0 6px 24px rgba(79,70,229,0.35);
+    }
+
+    .cta-secondary {
+      display: block;
+      max-width: 320px;
+      margin: 12px auto 0;
+      text-align: center;
+      color: #4F46E5 !important;
+      text-decoration: none;
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 14px 36px;
+      border-radius: 50px;
+      border: 2px solid #4F46E5;
+    }
+
+    .hr {
+      border: none;
+      border-top: 1px solid #F0F0F0;
+      margin: 32px 0;
+    }
+
+    .closing {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.75;
+    }
+
+    .sign-off {
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .sign-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FFC83C, #FF9F0A);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .sign-text strong {
+      font-family: 'Sora', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1A1560;
+      display: block;
+    }
+
+    .sign-text span { font-size: 12px; color: #888; }
+
+    .footer {
+      background: #1A1560;
+      padding: 32px 40px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Sora', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .footer-logo span { color: #FFC83C; }
+
+    .footer p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+      margin-top: 6px;
+    }
+
+    .footer-links {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+    }
+
+    @media only screen and (max-width: 480px) {
+      .header-hero { padding: 28px 24px 40px; }
+      .header-top { padding: 20px 24px 0; }
+      .header-hero h1 { font-size: 24px; }
+      .body-content { padding: 28px 24px 24px; }
+      .footer { padding: 28px 24px; }
+      .cta-primary, .cta-secondary { font-size: 14px; padding: 14px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="email-wrapper">
+  <div class="email-container">
+
+    <div class="header">
+      <div class="header-pattern"></div>
+      <div class="deco-circle-1"></div>
+      <div class="deco-circle-2"></div>
+
+      <div class="header-top">
+        <div class="quiz-logo-badge">
+          <div class="quiz-logo-icon">🧠</div>
+          <div class="quiz-logo-text">
+            <span class="top">Asces-Unita</span>
+            <span class="bottom">Quiz das Profissões</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-hero">
+        <div class="badge-new">✅ Quiz Concluído</div>
+        <h1>Seu perfil começa<br/>a ganhar <span>forma</span> 🚀</h1>
+        <p>A IA analisou suas respostas. Agora vem o mais importante: te ajudar a tomar a melhor decisão da sua vida.</p>
+      </div>
+    </div>
+
+    <div class="wave-divider">
+      <svg viewBox="0 0 600 40" preserveAspectRatio="none" height="40">
+        <path d="M0,0 C150,40 450,0 600,30 L600,0 Z" fill="#F0F2F7"/>
+      </svg>
+    </div>
+
+    <div class="body-content">
+
+      <p class="greeting">Oi, [NOME]! Tudo bem? 👋</p>
+
+      <p>Você acabou de dar um passo importante: completou o <strong>Quiz das Profissões da Asces-Unita</strong> — e isso diz muito sobre você. Nem todo mundo para pra pensar de verdade no futuro. Você parou. 👊</p>
+
+      <div class="highlight-box">
+        <p>🤖 O quiz usou <strong>inteligência artificial</strong> pra cruzar suas respostas com os perfis dos cursos que a gente oferece. O resultado não é aleatório: ele leva em conta seus interesses, seu jeito de pensar e o que você valoriza na vida profissional.</p>
+      </div>
+
+      <p>Mas calma — isso é só o começo da conversa.</p>
+
+      <p class="steps-title">Nos próximos dias, você vai receber conteúdos que vão te ajudar a:</p>
+
+      <ul class="steps-list">
+        <li>
+          <div class="step-arrow">→</div>
+          <span>Entender melhor <strong>a área que o quiz indicou</strong> pra você</span>
+        </li>
+        <li>
+          <div class="step-arrow">→</div>
+          <span>Ver como é <strong>a vida de quem já escolheu</strong> essa carreira</span>
+        </li>
+        <li>
+          <div class="step-arrow">→</div>
+          <span>Descobrir o que o <strong>mercado de trabalho</strong> espera dos profissionais de hoje</span>
+        </li>
+        <li>
+          <div class="step-arrow">→</div>
+          <span>Conhecer a <strong>estrutura e as oportunidades</strong> que a Asces-Unita oferece</span>
+        </li>
+      </ul>
+
+      <p>A ideia não é te convencer de nada. É te dar <strong>informação de qualidade</strong> pra você tomar a melhor decisão — com a cabeça no lugar.</p>
+
+      <hr class="hr" />
+
+      <div class="cta-block">
+        <p class="cta-label">Enquanto isso, explore</p>
+        <a href="URL_CURSOS_AQUI" class="cta-primary">🎓 Ver os cursos da Asces-Unita</a>
+        <a href="URL_INSTAGRAM_AQUI" class="cta-secondary">📱 Seguir a gente no Instagram</a>
+      </div>
+
+      <hr class="hr" />
+
+      <p class="closing">Qualquer dúvida, pode responder esse email mesmo. A gente lê tudo por aqui. 😊</p>
+
+      <div class="sign-off">
+        <div class="sign-icon">🚀</div>
+        <div class="sign-text">
+          <strong>Equipe Asces-Unita</strong>
+          <span>Caruaru-PE · asces.edu.br</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">Asces<span>-Unita</span></div>
+      <p>
+        Você está recebendo este email porque participou do Quiz das Profissões.<br/>
+        Caruaru – PE | Região do Agreste Pernambucano
+      </p>
+      <div class="footer-links">
+        <a href="URL_DESCADASTRO">Descadastrar</a>
+        <a href="URL_PRIVACIDADE">Política de Privacidade</a>
+        <a href="URL_SITE">Site Oficial</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
